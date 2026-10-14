@@ -6,6 +6,7 @@ A command-line expense tracker built with Python.
 - Add expenses with an amount, category, and note
 - List all expenses
 - Show totals by category
+- Delete an expense by its number
 - Saves data to a JSON file, so nothing is lost when you close it
 
 ## How to run
@@ -15,7 +16,7 @@ python main.py
 
 ## Example
 ```
-1) Add  2) List  3) Totals  4) Quit
+1) Add  2) List  3) Totals  4) Delete  5) Quit
 Choose: 2
 1. 2026-10-13  2.00  food  lunch
 ```
