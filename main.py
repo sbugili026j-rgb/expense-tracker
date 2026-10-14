@@ -60,10 +60,28 @@ def show_totals(expenses):
     print(f"TOTAL: {sum(totals.values()):.2f}")
 
 
+def delete_expense(expenses):
+    if not expenses:
+        print("No expenses yet.")
+        return
+    list_expenses(expenses)
+    try:
+        number = int(input("Number to delete: "))
+    except ValueError:
+        print("Please enter a number.")
+        return
+    if number < 1 or number > len(expenses):
+        print("No expense with that number.")
+        return
+    removed = expenses.pop(number - 1)
+    save_expenses(expenses)
+    print(f"Deleted: {removed['category']} {removed['amount']:.2f}")
+
+
 def main():
     expenses = load_expenses()
     while True:
-        print("\n1) Add  2) List  3) Totals  4) Quit")
+        print("\n1) Add  2) List  3) Totals  4) Delete  5) Quit")
         choice = input("Choose: ").strip()
         if choice == "1":
             add_expense(expenses)
@@ -72,10 +90,12 @@ def main():
         elif choice == "3":
             show_totals(expenses)
         elif choice == "4":
+            delete_expense(expenses)
+        elif choice == "5":
             print("Goodbye!")
             break
         else:
-            print("Please choose 1, 2, 3 or 4.")
+            print("Please choose 1, 2, 3, 4 or 5.")
 
 
 if __name__ == "__main__":
