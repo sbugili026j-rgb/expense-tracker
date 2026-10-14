@@ -1,2 +1,17 @@
-# expense-tracker
-Command-line expense tracker  built with python.  Add expenses, list them and see totals by category, saved to a JSON file.
+# Expense Tracker
+
+A command-line expense tracker built with Python.
+
+## Features
+- Add expenses with an amount, category, and note
+- List all expenses
+- Show totals by category
+- Saves data to a JSON file, so nothing is lost when you close it
+
+## How to run
+python main.py
+
+## Example
+1) Add  2) List  3) Totals  4) Quit
+Choose: 2
+1. 2026-10-13  2.00  food  lunch
