@@ -20,3 +20,9 @@ python main.py
 Choose: 2
 1. 2026-10-13  2.00  food  lunch
 ```
+
+## Run tests
+```bash
+pip install pytest
+python -m pytest
+```
